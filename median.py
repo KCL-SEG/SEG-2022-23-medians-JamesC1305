@@ -9,4 +9,10 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
+numbers.sort()
+listlength = len(numbers)
+if listlength % 2 == 1:
+    median = numbers[listlength//2]
+else:
+    median = (numbers[listlength//2 - 1] + numbers[listlength//2]) / 2
+print(median)
